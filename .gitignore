@@ -1,0 +1,7 @@
+# Claves reales del WiFi y de la API: nunca al repositorio.
+secrets.h
+
+# Compilados del IDE / arduino-cli
+build/
+*.bin
+*.elf
