@@ -7,11 +7,15 @@
 #include <HTTPClient.h>
 #include <DHT.h>
 #include <time.h>
-#include "secrets.h"   // WIFI_SSID, WIFI_PASS, API_KEY (no se sube a git)
 #include "root_ca.h"   // ROOT_CA para validar el HTTPS
 
 // Se define arriba para que el IDE genere bien los prototipos de las funciones.
 struct Reading { float t, h, smoke; bool flame; };
+
+// ---- Credenciales (edítalas aquí; NO las subas a git con valores reales) ---
+const char* WIFI_SSID = "TU_WIFI";             // red de 2.4 GHz (el ESP32 no usa 5 GHz)
+const char* WIFI_PASS = "TU_CLAVE_WIFI";
+const char* API_KEY   = "TU_INGEST_API_KEY";   // INGEST_API_KEY del backend (Render > Environment)
 
 // ---- Configuración -------------------------------------------------------
 const char* API_URL   = "https://pyroguard-backend.onrender.com/api/readings/";
